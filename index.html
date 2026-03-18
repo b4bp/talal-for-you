@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رسالتي لج</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="essa-for-farah">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://b4bp.github.io/FOR-YOU/">
+<meta property="og:image" content="https://b4bp.github.io/FOR-YOU/preview1.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter / Discord -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="ا">
+<meta name="twitter:image" content="https://b4bp.github.io/FOR-YOU/preview1.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  
+<style>
+  :root {
+    --rose: #c8556a;
+    --deep-rose: #8b2a3f;
+    --blush: #f5d0d8;
+    --cream: #fdf6f0;
+    --gold: #c9a96e;
+    --dark: #1a0a0e;
+    --petal: rgba(200, 85, 106, 0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--dark);
+    font-family: 'Amiri', serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+  /* ===== PARTICLES CANVAS ===== */
+  #particles {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+  /* ===== HERO SECTION ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,42,63,0.6) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 20% 100%, rgba(200,85,106,0.3) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 80% 80%, rgba(201,169,110,0.15) 0%, transparent 60%),
+      #1a0a0e;
+  }
+  /* Noise texture overlay */
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+  /* Petals raining */
+  .petal {
+    position: fixed;
+    width: 8px;
+    height: 12px;
+    background: radial-gradient(ellipse at 40% 40%, rgba(245,208,216,0.9), rgba(200,85,106,0.4));
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    pointer-events: none;
+    z-index: 2;
+    animation: fall linear infinite;
+    filter: blur(0.5px);
+  }
+  @keyframes fall {
+    0% { transform: translateY(-20px) rotate(0deg) translateX(0); opacity: 0.9; }
+    50% { transform: translateY(50vh) rotate(180deg) translateX(30px); opacity: 0.7; }
+    100% { transform: translateY(110vh) rotate(360deg) translateX(-20px); opacity: 0; }
+  }
+  @keyframes marquee {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+  /* Glowing orb */
+  .orb {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,85,106,0.25) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+    50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+  }
+  /* ===== MAIN CARD ===== */
+  .card {
+    position: relative;
+    z-index: 3;
+    width: min(680px, 92vw);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(200,85,106,0.25);
+    border-radius: 24px;
+    padding: 56px 48px;
+    backdrop-filter: blur(20px);
+    box-shadow:
+      0 0 0 1px rgba(201,169,110,0.1),
+      0 40px 80px rgba(0,0,0,0.6),
+      inset 0 1px 0 rgba(255,255,255,0.08);
+    animation: floatIn 1.2s cubic-bezier(0.16,1,0.3,1) both;
+    margin: 40px 0;
+  }
+  @keyframes floatIn {
+    from { opacity: 0; transform: translateY(60px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  /* Gold decorative lines */
+  .card::before, .card::after {
+    content: '';
+    position: absolute;
+    left: 48px; right: 48px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.4;
+  }
+  .card::before { top: 28px; }
+  .card::after { bottom: 28px; }
+  /* ===== HEADER ===== */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .heart-icon {
+    display: inline-block;
+    font-size: 36px;
+    animation: heartbeat 1.4s ease-in-out infinite;
+    filter: drop-shadow(0 0 12px rgba(200,85,106,0.8));
+    margin-bottom: 16px;
+  }
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    14% { transform: scale(1.15); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.08); }
+    56% { transform: scale(1); }
+  }
+  .title {
+    font-family: 'Scheherazade New', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: var(--blush);
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    text-shadow: 0 0 30px rgba(200,85,106,0.5);
+  }
+  .subtitle {
+    font-size: 1rem;
+    color: var(--gold);
+    opacity: 0.8;
+    margin-top: 20px;
+    letter-spacing: 0.08em;
+  }
+  /* ===== DIVIDER ===== */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0;
+  }
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(200,85,106,0.4), transparent);
+  }
+  .divider-diamond {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    opacity: 0.7;
+  }
+  /* ===== MESSAGE BOX ===== */
+  .message-container {
+    position: relative;
+    margin: 8px 0 32px;
+  }
+  .message-label {
+    font-size: 0.78rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    text-align: center;
+    opacity: 0.8;
+  }
+  .message-box {
+    background: rgba(200,85,106,0.06);
+    border: 1px solid rgba(200,85,106,0.2);
+    border-radius: 16px;
+    padding: 32px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .message-box::before {
+    content: '❝';
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 60px;
+    color: rgba(200,85,106,0.12);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+  .message-text {
+    font-family: 'Scheherazade New', serif;
+    font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+    color: var(--blush);
+    line-height: 2.1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+    min-height: 200px;
+  }
+  .message-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(200,85,106,0.08), transparent 70%);
+    pointer-events: none;
+  }
+  /* signature */
+  .signature {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Scheherazade New', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    opacity: 0.9;
+    font-style: italic;
+  }
+  /* ===== MUSIC PLAYER ===== */
+  .player-section {
+    margin-top: 8px;
+  }
+  .player-label {
+    font-size: 0.78rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    text-align: center;
+    opacity: 0.8;
+  }
+  .player {
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(200,85,106,0.2);
+    border-radius: 20px;
+    padding: 24px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .player::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(200,85,106,0.05), transparent 50%, rgba(201,169,110,0.04));
+    pointer-events: none;
+  }
+  /* Song info */
+  .song-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .album-art {
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--deep-rose), var(--rose));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(200,85,106,0.4);
+    animation: spin-art 8s linear infinite paused;
+    border: 2px solid rgba(200,85,106,0.3);
+  }
+  .album-art.playing {
+    animation-play-state: running;
+  }
+  @keyframes spin-art {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .song-details {
+    flex: 1;
+    min-width: 0;
+  }
+  .song-name {
+    font-family: 'Scheherazade New', serif;
+    font-size: 1.15rem;
+    color: var(--blush);
+    white-space: nowrap;
+    overflow: hidden;
+}
+  .song-artist {
+    font-size: 0.82rem;
+    color: rgba(245,208,216,0.5);
+    margin-top: 4px;
+  }
+  /* Progress bar */
+  .progress-area {
+    margin-bottom: 18px;
+  }
+  .time-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    color: rgba(245,208,216,0.45);
+    margin-bottom: 8px;
+    font-family: monospace;
+    letter-spacing: 0.05em;
+  }
+  .progress-track {
+    height: 4px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 99px;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+    direction: ltr;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--deep-rose), var(--rose), var(--gold));
+    border-radius: 99px;
+    transition: width 0.1s linear;
+    position: relative;
+    width: 0%;
+  }
+  .progress-fill::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(200,85,106,0.7);
+    transition: transform 0.15s;
+  }
+  .progress-track:hover .progress-fill::after {
+    transform: translateY(-50%) scale(1.3);
+  }
+  /* Waveform visualizer */
+  .waveform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 36px;
+    margin-bottom: 20px;
+  }
+  .wave-bar {
+    width: 3px;
+    border-radius: 99px;
+    background: linear-gradient(to top, var(--rose), var(--blush));
+    opacity: 0.6;
+    animation: wave 1.2s ease-in-out infinite paused;
+  }
+  .wave-bar.active { animation-play-state: running; opacity: 1; }
+  @keyframes wave {
+    0%, 100% { transform: scaleY(0.3); }
+    50% { transform: scaleY(1); }
+  }
+  /* Controls */
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .ctrl-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(245,208,216,0.6);
+    font-size: 18px;
+    transition: all 0.2s;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ctrl-btn:hover {
+    color: var(--blush);
+    transform: scale(1.1);
+    background: rgba(200,85,106,0.1);
+  }
+  .play-btn {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, var(--rose), var(--deep-rose));
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s;
+    box-shadow: 0 4px 20px rgba(200,85,106,0.5);
+    position: relative;
+  }
+  .play-btn::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    border: 2px solid rgba(200,85,106,0.3);
+    animation: ring 2s ease-in-out infinite;
+    opacity: 0;
+  }
+  .play-btn.playing::before { opacity: 1; }
+  @keyframes ring {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(1.45); opacity: 0; }
+  }
+  .play-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 30px rgba(200,85,106,0.7);
+  }
+  /* Volume */
+  .volume-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    direction: ltr;
+  }
+  .vol-icon { font-size: 14px; color: rgba(245,208,216,0.45); }
+  .volume-track {
+    flex: 1;
+    height: 3px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 99px;
+    cursor: pointer;
+    position: relative;
+    direction: ltr;
+  }
+  .volume-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--rose), var(--gold));
+    border-radius: 99px;
+    width: 70%;
+  }
+  .vol-val {
+    font-size: 0.7rem;
+    color: rgba(245,208,216,0.4);
+    font-family: monospace;
+    width: 28px;
+    text-align: left;
+  }
+  /* ===== NO FILE MESSAGE ===== */
+  .no-file-msg {
+    text-align: center;
+    color: rgba(245,208,216,0.35);
+    font-size: 0.82rem;
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+  }
+  /* File input hidden */
+  #audioFile { display: none; }
+  .upload-btn {
+    display: block;
+    margin: 12px auto 0;
+    background: rgba(200,85,106,0.1);
+    border: 1px dashed rgba(200,85,106,0.35);
+    color: rgba(245,208,216,0.55);
+    padding: 8px 20px;
+    border-radius: 99px;
+    cursor: pointer;
+    font-family: 'Amiri', serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    transition: all 0.25s;
+  }
+  .upload-btn:hover {
+    background: rgba(200,85,106,0.18);
+    color: var(--blush);
+    border-color: rgba(200,85,106,0.6);
+  }
+  /* ===== FLOATING HEARTS ===== */
+  .float-heart {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    font-size: 20px;
+    animation: floatHeart 2.5s ease-out forwards;
+  }
+  @keyframes floatHeart {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-180px) scale(0.5); }
+  }
+  /* ===== REVEAL BUTTON ===== */
+  .reveal-btn {
+    display: block;
+    margin: 0 auto 28px;
+    background: linear-gradient(135deg, var(--deep-rose), var(--rose));
+    border: none;
+    color: var(--blush);
+    font-family: 'Scheherazade New', serif;
+    font-size: 1.15rem;
+    padding: 12px 36px;
+    border-radius: 99px;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+    box-shadow: 0 4px 24px rgba(200,85,106,0.4);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .reveal-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent);
+  }
+  .reveal-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 32px rgba(200,85,106,0.65);
+  }
+  .reveal-btn:active { transform: scale(0.97); }
+  /* ===== MESSAGE REVEAL ANIMATION ===== */
+  .message-container {
+    overflow: hidden;
+  }
+  .message-inner {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.16,1,0.3,1);
+    pointer-events: none;
+    display: none;
+  }
+  .message-inner.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: block;
+  }
+  /* Staggered lines */
+  .message-text span {
+    display: inline;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+  }
+  .message-inner.revealed .message-text span {
+    opacity: 1;
+  }
+  /* Typing cursor */
+  .typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: var(--rose);
+    margin-right: 2px;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+  }
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+  /* ===== SCROLLBAR ===== */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #1a0a0e; }
+  ::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 2px; }
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 480px) {
+    .card { padding: 36px 24px; }
+    .message-box { padding: 24px 20px; }
+    .player { padding: 18px 18px; }
+  }
+</style>
+</head>
+<body>
+<!-- Canvas for star particles -->
+<canvas id="particles"></canvas>
+<!-- Falling petals (JS generated) -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="orb"></div>
+  <div class="card">
+    <!-- Header -->
+    <div class="header">
+      <div class="heart-icon">🌹</div>
+      <h1 class="title">رسالتي لج</h1>
+      <p class="subtitle">—  كتبت الي بقلبي  —</p>
+    </div>
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-diamond"></div>
+      <div class="divider-line"></div>
+    </div>
+    <!-- Message -->
+    <div class="message-container">
+      <button class="reveal-btn" id="revealBtn">✦ افتحي رسالتي ✦</button>
+      <div class="message-inner" id="messageInner">
+        <p class="message-label">✦ رساله القلب ✦</p>
+        <div class="message-box">
+          <div class="message-glow"></div>
+          <p class="message-text" id="messageText">
+            <span style="transition-delay:0.2s">الدنيا تمشي وكل شيء يتغير حتى انتي وممكن حتى انا وكل شيء ماصار مضمون بس الشيء الوحيد الي ضامنه الي هو حبي لج ماراح يتغير مهما تغير لونج</span><br>
+            <span style="transition-delay:0.6s">والأغنية التي تعزفها روحي في الهدوء،</span><br>
+            <span style="transition-delay:1.0s">ما إن أراكِ حتى يعود للدنيا بريقها،</span><br>
+            <span style="transition-delay:1.4s">وتصبح كل التفاصيل تشبهكِ.</span><br><br>
+            <span style="transition-delay:1.8s">✦</span>
+          </p>
+        </div>
+        <p class="signature" style="opacity:0;transition:opacity 0.8s ease 2.2s" id="signatureEl">— مع كل الحب ♡</p>
+      </div>
+    </div>
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-diamond"></div>
+      <div class="divider-line"></div>
+    </div>
+    <!-- Music Player -->
+    <div class="player-section">
+      <p class="player-label">✦ اغنيتي لج ✦</p>
+      <div class="player">
+        <div class="song-info">
+         <div class="album-art" id="albumArt">
+  <img src="photo.gif" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">
+</div>
+          <div class="song-details">
+           
+            <div class="song-artist" id="songArtist">ضع ملف mp3 هنا</div>
+            <div class="song-name" id="songName">
+  <span id="marqueeText" style="display:inline-block;animation:marquee 12s linear infinite">
+    MUSliM - Matzaalsh | Official Lyrics Video - 2023 | مسلم - متزعلش
+  </span>
+</div>
+          </div>
+        </div>
+        <!-- Waveform -->
+        <div class="waveform" id="waveform"></div>
+        <!-- Progress -->
+        <div class="progress-area">
+          <div class="time-row">
+            <span id="currentTime">0:00</span>
+            <span id="totalTime">0:00</span>
+          </div>
+          <div class="progress-track" id="progressTrack">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+        <!-- Controls -->
+        <div class="controls">
+          <button class="ctrl-btn" id="rewindBtn" title="رجوع 10 ثوان">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+              <text x="12" y="14" text-anchor="middle" font-size="6" fill="currentColor" font-family="sans-serif">10</text>
+            </svg>
+          </button>
+          <button class="play-btn" id="playBtn">
+            <span id="playIcon">▶</span>
+          </button>
+          <button class="ctrl-btn" id="forwardBtn" title="تقديم 10 ثوان">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 5V1l5 5-5 5V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z"/>
+              <text x="12" y="14" text-anchor="middle" font-size="6" fill="currentColor" font-family="sans-serif">10</text>
+            </svg>
+          </button>
+        </div>
+        <!-- Volume -->
+        <div class="volume-row">
+          <span class="vol-icon" id="volIcon">🔊</span>
+          <div class="volume-track" id="volumeTrack">
+            <div class="volume-fill" id="volumeFill"></div>
+          </div>
+          <span class="vol-val" id="volVal">70%</span>
+        </div>
+        <!-- Upload -->
+        <input type="file" id="audioFile" accept="audio/*,.mp3,.ogg,.wav,.m4a,.flac" style="display:none">
+      </div>
+    </div>
+    <!-- Audio element -->
+    <audio id="audioPlayer" src="song.mp3" preload="auto"></audio>
+  </div><!-- /card -->
+</div><!-- /hero -->
+<script>
+// ======================================
+// STARS CANVAS
+// ======================================
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+const stars = Array.from({length: 120}, () => ({
+  x: Math.random() * window.innerWidth,
+  y: Math.random() * window.innerHeight,
+  r: Math.random() * 1.2 + 0.2,
+  alpha: Math.random() * 0.6 + 0.1,
+  speed: Math.random() * 0.004 + 0.001,
+  phase: Math.random() * Math.PI * 2
+}));
+function drawStars(t) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  stars.forEach(s => {
+    const a = s.alpha * (0.6 + 0.4 * Math.sin(t * s.speed * 60 + s.phase));
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(245,208,216,${a})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(ts => drawStars(ts / 1000));
+}
+drawStars(0);
+// ======================================
+// FALLING PETALS
+// ======================================
+function createPetal() {
+  const p = document.createElement('div');
+  p.className = 'petal';
+  p.style.left = Math.random() * 100 + 'vw';
+  p.style.width = (Math.random() * 6 + 5) + 'px';
+  p.style.height = (Math.random() * 8 + 8) + 'px';
+  p.style.animationDuration = (Math.random() * 5 + 6) + 's';
+  p.style.animationDelay = (Math.random() * 5) + 's';
+  p.style.opacity = Math.random() * 0.7 + 0.2;
+  const hue = Math.random() > 0.5 ? 'rgba(245,208,216,0.8)' : 'rgba(200,85,106,0.5)';
+  p.style.background = `radial-gradient(ellipse at 40% 40%, ${hue}, transparent)`;
+  document.body.appendChild(p);
+  setTimeout(() => p.remove(), 14000);
+}
+setInterval(createPetal, 500);
+for (let i = 0; i < 8; i++) createPetal();
+// ======================================
+// WAVEFORM BARS
+// ======================================
+const waveform = document.getElementById('waveform');
+const BAR_HEIGHTS = [14,22,32,44,52,60,52,44,36,44,52,60,52,44,32,22,14,24,36,48,36,24];
+BAR_HEIGHTS.forEach((h, i) => {
+  const bar = document.createElement('div');
+  bar.className = 'wave-bar';
+  bar.style.height = h + 'px';
+  bar.style.animationDelay = (i * 0.065) + 's';
+  bar.style.animationDuration = (0.9 + Math.random() * 0.5) + 's';
+  waveform.appendChild(bar);
+});
+// ======================================
+// AUDIO PLAYER
+// ======================================
+const audio = document.getElementById('audioPlayer');
+const playBtn = document.getElementById('playBtn');
+const playIcon = document.getElementById('playIcon');
+const albumArt = document.getElementById('albumArt');
+const songName = document.getElementById('songName');
+const songArtist = document.getElementById('songArtist');
+const progressFill= document.getElementById('progressFill');
+const progressTrack=document.getElementById('progressTrack');
+const currentTimeEl=document.getElementById('currentTime');
+const totalTimeEl =document.getElementById('totalTime');
+const volumeFill = document.getElementById('volumeFill');
+const volumeTrack = document.getElementById('volumeTrack');
+const volVal = document.getElementById('volVal');
+const volIcon = document.getElementById('volIcon');
+const rewindBtn = document.getElementById('rewindBtn');
+const forwardBtn = document.getElementById('forwardBtn');
+const waveBars = document.querySelectorAll('.wave-bar');
+let isPlaying = false;
+audio.volume = 0.7;
+// Show song name from file
+let srcName = audio.src.split('/').pop().replace(/\.[^.]+$/, '') || 'أغنيتنا';
+if (srcName.includes('%')) srcName = decodeURIComponent(srcName);
+if (srcName.includes(' - ')) {
+  const parts = srcName.split(' - ');
+  songArtist.textContent = parts[0];
+} else {
+  songArtist.textContent = '🎵';
+}
+function fmt(s) {
+  const m = Math.floor(s / 60);
+  const ss = Math.floor(s % 60).toString().padStart(2,'0');
+  return `${m}:${ss}`;
+}
+function setPlaying(state) {
+  isPlaying = state;
+  playIcon.textContent = state ? '⏸' : '▶';
+  playBtn.classList.toggle('playing', state);
+  albumArt.classList.toggle('playing', state);
+  waveBars.forEach(b => b.classList.toggle('active', state));
+}
+playBtn.addEventListener('click', () => {
+  isPlaying ? audio.pause() : audio.play();
+});
+audio.addEventListener('play', () => setPlaying(true));
+audio.addEventListener('pause', () => setPlaying(false));
+audio.addEventListener('ended', () => setPlaying(false));
+audio.addEventListener('timeupdate', () => {
+  if (!audio.duration) return;
+  const pct = (audio.currentTime / audio.duration) * 100;
+  progressFill.style.width = pct + '%';
+  currentTimeEl.textContent = fmt(audio.currentTime);
+});
+audio.addEventListener('loadedmetadata', () => {
+  totalTimeEl.textContent = fmt(audio.duration);
+});
+// Seek
+progressTrack.addEventListener('click', e => {
+  if (!audio.duration) return;
+  const rect = progressTrack.getBoundingClientRect();
+  const ratio = (e.clientX - rect.left) / rect.width;
+  audio.currentTime = ratio * audio.duration;
+});
+// Scrub drag
+let dragging = false;
+progressTrack.addEventListener('mousedown', () => dragging = true);
+window.addEventListener('mousemove', e => {
+  if (!dragging || !audio.duration) return;
+  const rect = progressTrack.getBoundingClientRect();
+  const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+  audio.currentTime = ratio * audio.duration;
+  progressFill.style.width = (ratio * 100) + '%';
+});
+window.addEventListener('mouseup', () => dragging = false);
+// Touch seek
+progressTrack.addEventListener('touchstart', e => {
+  const touch = e.touches[0];
+  const rect = progressTrack.getBoundingClientRect();
+  const ratio = Math.max(0, Math.min(1, (touch.clientX - rect.left) / rect.width));
+  if (audio.duration) audio.currentTime = ratio * audio.duration;
+}, {passive: true});
+// Rewind / Forward
+rewindBtn.addEventListener('click', () => { audio.currentTime = Math.max(0, audio.currentTime - 10); });
+forwardBtn.addEventListener('click', () => { audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 10); });
+// Volume
+function setVolume(ratio) {
+  ratio = Math.max(0, Math.min(1, ratio));
+  audio.volume = ratio;
+  volumeFill.style.width = (ratio * 100) + '%';
+  volVal.textContent = Math.round(ratio * 100) + '%';
+  volIcon.textContent = ratio === 0 ? '🔇' : ratio < 0.4 ? '🔉' : '🔊';
+}
+volumeTrack.addEventListener('click', e => {
+  const rect = volumeTrack.getBoundingClientRect();
+  setVolume((e.clientX - rect.left) / rect.width);
+});
+let volDrag = false;
+volumeTrack.addEventListener('mousedown', () => volDrag = true);
+window.addEventListener('mousemove', e => {
+  if (!volDrag) return;
+  const rect = volumeTrack.getBoundingClientRect();
+  setVolume((e.clientX - rect.left) / rect.width);
+});
+window.addEventListener('mouseup', () => volDrag = false);
+// ======================================
+// REVEAL MESSAGE BUTTON WITH TYPING EFFECT
+// ======================================
+const revealBtn = document.getElementById('revealBtn');
+const messageInner = document.getElementById('messageInner');
+const signatureEl = document.getElementById('signatureEl');
+const messageText = document.getElementById('messageText');
+const messages = [
+  "هيوفه",
+  "كيفك حبيبتي",
+  "بدي احكي معك بموضوع كتير مهم ",
+  "موضوع الحكي تبعنا...هيوفه انا عاطي ابوكي كلمة و كسرتا مشانك بس الحكي يلي عندي متأكد 100% انك ح تتفهميه و اكيد انك فكرتي فيه قبل ما احكيه اساساً بس لازم حدا بيناتنا يتشجع و يحكيه و لأني بعرفك و بعرف انك انسانه واعيه و فاهمه قررت احكيه ",
+    "حبيبي اولاً الحكي عالموبايل مابجيب غير المشاكل لأنو هاد بيعتمد ع طريقه الكتابة و طريقة فهمك و مزاجك طبعاً مو ب ارادتك انو تفهمي الحكي هاد بعقلك اللاوعي يعني شغلات لا ارادية هي هيك بدها تتفسر بناءاً على مودك و نفسيتك",
+    "مشان هيك قررت انو نقطع التواصل عالموبايل حتى اتصالات ماعاد نحكي ابداً ",
+  "(إلا) الا اذا كنتي كتير بتحتاجيني مو قصدي اذا مليتي او اشتقتي لأنو انا عن نفسي بشتقلك كل دقيقه و كل ثانيه ف هاد مو يعني اني كل شوي ابعتلك",
+  "انا قصدي اذا كنتي متدايقه و محتاجتيني بعتيلي ح تضلي ببالي و ح ضل متذكرك بس مشان الله يوفقنا و لأنك بتعرفي ابوكي اكيد بتعرفي اذا عرف انو رجعنا نحكي مستحيل يقبل فيني و يتقبلني لأنو عطيتو كلمة و كسرتا ",
+    "بس تحتاجي حدا يوقف معك انا موجود بعتيلي بس تكوني كتير محتاجتيني لأنو الصراحة انا ماني محبذ فكرة حكينا هلأ و من قبل بس مشان ما تزعلي وافقت ",
+"انا لو مابدي ياكي ماكنت حكيت هالحكي ",
+"كنت ضليت عم احكي معك لحتى يلقطوكي اهلك و بس يلقطوكي بختفي من حياتك (فص ملح و داب)",
+"بس انا بدي ياكي بدي ياكي بالحلال و مشان هيك انا قررت هالقرار من هلأ ما ح يعود بيناتنا حكي غير بالضرووورة",
+"و خليكي متذكرة اني ح ضل حبك طول عمري",
+  "✦"
+];
+revealBtn.addEventListener('click', () => {
+  revealBtn.style.transition = 'opacity 0.5s, transform 0.5s';
+  revealBtn.style.opacity = '0';
+  revealBtn.style.transform = 'scale(0.9)';
+  setTimeout(() => { revealBtn.style.display = 'none'; }, 500);
+  
+  // Show message container
+  messageInner.style.display = 'block';
+  setTimeout(() => {
+    messageInner.classList.add('revealed');
+  }, 50);
+  
+  // Typing effect
+  messageText.innerHTML = '<span class="typing-cursor"></span>';
+  let msgIndex = 0;
+  let charIndex = 0;
+  let currentText = '';
+  
+  function typeNext() {
+    if (msgIndex >= messages.length) {
+      // Show signature after typing finishes
+      setTimeout(() => {
+        signatureEl.style.opacity = '1';
+      }, 500);
+      return;
+    }
+    
+    const currentMsg = messages[msgIndex];
+    
+    if (charIndex < currentMsg.length) {
+      currentText += currentMsg[charIndex];
+      charIndex++;
+      
+      // Update display with cursor
+      let html = '';
+      for (let i = 0; i < msgIndex; i++) {
+        html += messages[i] + (i < messages.length - 1 ? '<br>' : '');
+      }
+      html += currentText + '<span class="typing-cursor"></span>';
+      
+      messageText.innerHTML = html;
+      
+      // Typing speed (random for natural feel)
+      const speed = 50 + Math.random() * 50;
+      setTimeout(typeNext, speed);
+    } else {
+      // Line finished, go to next line
+      msgIndex++;
+      charIndex = 0;
+      currentText = '';
+      
+      // Pause between lines
+      setTimeout(typeNext, 600);
+    }
+  }
+  
+  // Start typing after reveal animation
+  setTimeout(typeNext, 600);
+  
+  // Spawn burst of hearts
+  for (let i = 0; i < 15; i++) {
+    setTimeout(() => {
+      const hearts = ['♡','❤','💕','🌹','💗','✨'];
+      const h = document.createElement('div');
+      h.className = 'float-heart';
+      h.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+      h.style.left = (30 + Math.random() * 40) + 'vw';
+      h.style.top = (40 + Math.random() * 20) + 'vh';
+      h.style.fontSize = (14 + Math.random() * 16) + 'px';
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 2600);
+    }, i * 120);
+  }
+});
+// ======================================
+// FLOATING HEARTS on click
+// ======================================
+document.querySelector('.card').addEventListener('click', e => {
+  const hearts = ['♡','❤','💕','🌹','💗'];
+  const h = document.createElement('div');
+  h.className = 'float-heart';
+  h.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+  h.style.left = e.clientX + 'px';
+  h.style.top = e.clientY + 'px';
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 2600);
+});
+// ======================================
+// TOUCH SUPPORT for volume
+// ======================================
+volumeTrack.addEventListener('touchstart', e => {
+  const touch = e.touches[0];
+  const rect = volumeTrack.getBoundingClientRect();
+  setVolume((touch.clientX - rect.left) / rect.width);
+}, {passive:true});
+</script>
+</body>
+</html>
